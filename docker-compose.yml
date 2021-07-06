@@ -1,0 +1,24 @@
+version: "3"
+services:
+        jenkins:
+                container_name: jenkins-compose
+                restart: always
+                build: 
+                        context: jenkins-dockerfile
+                        dockerfile: Dockerfile
+                user: root
+                ports:
+                        - 8000:8080
+                        - 50000:50000
+                volumes:
+                        - /home/ban/jenkins/jenkins:/var/jenkins_home
+                        - /home/ban/jenkins/.ssh:/root/.ssh
+        spring:
+                container_name: spring-compose
+                build:
+                        context: spring-dockerfile
+                        dockerfile: Dockerfile
+                ports:
+                        - 8080:8080
+                volumes:
+                        - /home/ban/jenkins/jenkins/workspace/01.gitlab-boot-CI-CD/build/libs:/deploy
