@@ -9,9 +9,23 @@ Image : Jenkins/jenkins:lts, gitlab-ce, openjdk:8-jdk
 
 project : spring-boot
 
-# Start
+# Section 1 : install docker-compose & start
+## install docker-compose
+```{.bash}
+$ sudo curl -L https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+
+$ docker-compose --version
+```
+## start up docker-compose
 ```{.bash}
 $ docker-compose up --build -d
+```
+
+# Section 2 : config ssh
+## publish ssh-keygen in boot container
+```
+
 ```
 
 # Reference
