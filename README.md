@@ -2,6 +2,12 @@
 
 Jenkins, gitlab을 Docker 컨테이너로 구축하고 CI/CD 기능을 구현한다. 최종적으로 docker를 사용한 Node.js, Spring boot CI/CD 환경 구축을 목표로 한다. 해당 과정은 VirtualBox의 우분투 이미지를 활용하여 작성하였다.
 
+1. [docker-compose 설치](#-Section-1-:-install-docker-compose-&-start)
+2. [배포환경 설정](#-Section-2-:deploy-environment)
+3. [github webhook 설정](#-Section-3-:-github-webhook)
+4. jenkins 실행
+5. 오류노트
+
 # Version
 
 OS : Ubuntu 18.04.5 LTS
@@ -27,7 +33,7 @@ $ docker-compose --version
 $ docker-compose up --build -d
 ```
 
-# Section 2 : config ssh
+# Section 2 : deploy environment
 
 ## publish ssh-keygen in jenkins container
 
@@ -45,7 +51,7 @@ $ cat '<jenkins-container-primaryKey>' >> /home/ban/.ssh/authorized_key
 ```
 
 ## deploy script test
-jdk8 컨테이너를 원격으로 배포한다.
+
 ```{.bash}
 $ docker exec -it jenkins-compose bash
 
@@ -57,7 +63,9 @@ $ ssh [유저이름]@$(/sbin/ip route | awk '/default/ { print $3 }')<<EOF
 > EOF
 ```
 
-# Section 3 : config build trigger in jenkins
+# Section 3 : github webhook
+
+# Section 4 : config jenkins
 
 # Reference
 
