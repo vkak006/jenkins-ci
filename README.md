@@ -31,7 +31,7 @@ $ docker-compose up --build -d
 
 ## publish ssh-keygen in jenkins container
 
-host에 있는 컨테이너를 새로 띄우기 위하여 jenkins 컨테이너와 host간 ssh 공개키를 등록한다. jenkins container의 id_rsa.pub 내용을 복사하여 host의 authorized_keys 파일에 붙여넣는다.
+host에 있는 컨테이너를 새로 띄우기 위하여 jenkins 컨테이너와 host간 ssh 공개키를 등록한다. jenkins 컨테이너의 id_rsa.pub 내용을 복사하여 host의 authorized_keys 파일에 붙여넣는다.
 
 ```
 $ docker exec -it jenkins-compose bash
