@@ -45,7 +45,7 @@ $ cat '<jenkins-container-primaryKey>' >> /home/ban/.ssh/authorized_key
 ```
 
 ## deploy script test
-
+jdk8 컨테이너를 원격으로 배포한다.
 ```{.bash}
 $ docker exec -it jenkins-compose bash
 
