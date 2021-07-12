@@ -4,7 +4,7 @@ Jenkins, gitlab을 Docker 컨테이너로 구축하고 CI/CD 기능을 구현한
 
 1. [docker-compose 설치](#section-1-install-docker-compose)
 2. [배포환경 설정](#section-2-deploy-environment)
-3. [github webhook 설정](#section-3-github-webhook)
+3. [gitlab webhook 설정](#section-3-github-webhook)
 4. jenkins 실행
 5. 오류노트
 
@@ -63,7 +63,7 @@ $ ssh [유저이름]@$(/sbin/ip route | awk '/default/ { print $3 }')<<EOF
 > EOF
 ```
 
-# Section 3. github webhook
+# Section 3. gitlab webhook
 
 # Section 4. config jenkins
 
