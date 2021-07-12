@@ -1,6 +1,6 @@
 # Overview
 
-Jenkins, gitlab을 Docker 컨테이너로 구축하고 CI/CD 기능을 구현한다. 최종적으로 docker를 사용한 Node.js, Spring boot CI/CD 환경 구축을 목표로 한다. 해당 과정은 VirtualBox의 우분투 이미지를 활용하여 작성하였다.
+Jenkins, gitlab을 Docker 컨테이너로 구축하고 CI/CD 기능을 구현하고, 최종적으로 docker를 사용한 Node.js, Spring boot CI/CD 환경 구축을 목표로 함.
 
 1. [docker-compose 설치](#section-1-install-docker-compose)
 2. [배포환경 설정](#section-2-deploy-environment)
