@@ -22,3 +22,10 @@ services:
                         - 8080:8080
                 volumes:
                         - /home/ban/jenkins/jenkins/workspace/01.gitlab-boot-CI-CD/build/libs:/deploy
+        mongodb:
+                container_name: mongo-compose
+                build:
+                        context: mongo-dockerfile
+                        dockerfile: Dockerfile
+                ports:
+                        - 27017:27017
